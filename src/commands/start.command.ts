@@ -2,16 +2,10 @@ import UserController from './../controllers/user.controller';
 import {Context} from 'telegraf';
 import User from './../interfaces/user.interface';
 
-const userController = new UserController();
+const userController = new UserController<User>();
 
 class UserCommands {
-    private readonly context: Context;
-
-    constructor(ctx: Context) {
-        this.context = ctx;
-    }
-
-    public static userStart = async (context: Context) => {
+    public static Start = async (context: Context) => {
         const {message} = context;
         if (message && message.from) {
             const [instance, created] = await userController.createUser(message.from);

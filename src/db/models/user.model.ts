@@ -1,4 +1,4 @@
-import {DataTypes, Model, InferAttributes, InferCreationAttributes, CreationOptional } from 'sequelize';
+import {DataTypes, Model, InferAttributes, InferCreationAttributes, CreationOptional} from 'sequelize';
 import sequelize from './../index';
 
 class UserModel extends Model<InferAttributes<UserModel>, InferCreationAttributes<UserModel>> {

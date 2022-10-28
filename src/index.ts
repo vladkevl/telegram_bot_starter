@@ -23,8 +23,8 @@ dotenv.config();
 const bot: Telegraf<Context> = new Telegraf(process.env.BOT_TOKEN as string);
 
 bot.start(async (ctx: Context) => {
-        const user = await UserCommands.userStart(ctx);
-        await ctx.reply(`Hello ${user.first_name}!`);
+    const user = await UserCommands.Start(ctx);
+    await ctx.reply(`Hello ${user.first_name}!`);
 });
 
 bot.launch();

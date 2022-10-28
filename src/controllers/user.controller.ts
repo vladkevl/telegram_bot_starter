@@ -1,7 +1,6 @@
 import UserModel from '../db/models/user.model';
-import User from './../interfaces/user.interface';
 
-class UserController {
+class UserController<User> {
     public createUser = async (userData: User) => await UserModel.upsert(userData);
 }
 
