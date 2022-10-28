@@ -1,0 +1,15 @@
+node_modules
+dist
+/.idea
+
+.env
+.env.test
+.env.production
+
+*.db
+package-lock.json
+
+
+# Project exclude paths
+/src/index.js
+/src/index.js.map
